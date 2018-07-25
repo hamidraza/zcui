@@ -1,9 +1,9 @@
 const shell = require('shelljs');
 const chalk = require('chalk');
 const ora = require('ora');
-const changeCase = require('change-case');
 const fs = require('fs');
 const path = require('path');
+const helper = require('../helpers');
 
 const variants = require('../variants.json');
 
@@ -31,12 +31,7 @@ exports.builder = yargs => {
 };
 
 exports.handler = argv => {
-  const app = {
-    default: argv.app,
-    param  : changeCase.paramCase(argv.app),
-    pascal : changeCase.pascalCase(argv.app),
-    camel  : changeCase.camelCase(argv.app)
-  };
+  const app = helper.getCases(argv.app);
 
   if (!shell.which('git')) {
     console.log(chalk.red('Sorry, this script requires git'));

@@ -1,11 +1,10 @@
 const shell = require('shelljs');
 const chalk = require('chalk');
-const changeCase = require('change-case');
 const fs = require('fs');
 const path = require('path');
 const {evalTemplate} = require('../../helpers/template');
 const logSymbols = require('../../helpers/log-symbols.js');
-const {getProjectRoot} = require('../../helpers');
+const {getProjectRoot, getCases} = require('../../helpers');
 
 const PWD = getProjectRoot();
 
@@ -27,12 +26,7 @@ exports.handler = argv => {
     shell.mkdir('-p', componentsDir);
   }
 
-  const name = {
-    default: argv.name,
-    param  : changeCase.paramCase(argv.name),
-    pascal : changeCase.pascalCase(argv.name),
-    camel  : changeCase.camelCase(argv.name)
-  };
+  const name = getCases(argv.name);
 
   const componentPath = path.join(componentsDir, name.param);
   if (shell.test('-d', componentPath)) {

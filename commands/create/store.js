@@ -1,11 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
-const changeCase = require('change-case');
 const shell = require('shelljs');
 const {evalTemplate} = require('../../helpers/template');
 const logSymbols = require('../../helpers/log-symbols.js');
-const {getProjectRoot} = require('../../helpers');
+const {getProjectRoot, getCases} = require('../../helpers');
 
 const PWD = getProjectRoot();
 
@@ -19,12 +18,7 @@ exports.builder = yargs => {
 };
 
 exports.handler = argv => {
-  const name = {
-    default: argv.name,
-    param  : changeCase.paramCase(argv.name),
-    pascal : changeCase.pascalCase(argv.name),
-    camel  : changeCase.camelCase(argv.name)
-  };
+  const name = getCases(argv.name);
 
   const storeDir = path.join(PWD, AppConfig.path.store);
   const moduleDir = path.join(storeDir, 'modules');
@@ -63,10 +57,10 @@ exports.handler = argv => {
   });
 
   const importStr = modulesToImport.map(m => {
-    return `import ${changeCase.pascalCase(m)} from './${m}';`;
+    return `import ${getCases(m).pascal} from './${m}';`;
   }).join("\n");
   const exportStr = modulesToImport.map(m => {
-    return `\n  ${changeCase.pascalCase(m)}`;
+    return `\n  ${getCases(m).pascal}`;
   }).join(",");
 
   const indexPath = path.resolve(moduleDir, `index.js`);

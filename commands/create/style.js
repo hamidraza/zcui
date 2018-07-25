@@ -1,11 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
-const changeCase = require('change-case');
 const shell = require('shelljs');
 const {evalTemplate} = require('../../helpers/template');
 const logSymbols = require('../../helpers/log-symbols.js');
-const {getProjectRoot} = require('../../helpers');
+const {getProjectRoot, getCases} = require('../../helpers');
 
 const PWD = getProjectRoot();
 
@@ -19,12 +18,7 @@ exports.builder = yargs => {
 };
 
 exports.handler = argv => {
-  const name = {
-    default: argv.name,
-    param  : changeCase.paramCase(argv.name),
-    pascal : changeCase.pascalCase(argv.name),
-    camel  : changeCase.camelCase(argv.name)
-  };
+  const name = getCases(argv.name);
 
   const styleDir = path.join(PWD, AppConfig.path.styles, 'partials');
   if(!shell.test('-d', styleDir)) shell.mkdir('-p', styleDir);

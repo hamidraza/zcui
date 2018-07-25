@@ -19,4 +19,3 @@ exports.builder = yargs => {
     .example('etc...')
     .commandDir('./create');
 };
-
