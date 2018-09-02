@@ -22,71 +22,29 @@ Node is available for a variety of platforms at nodejs.org. It is important that
 
 After the installation is complete, verify that Node is set up correctly by typing the below commands on the command line. Both should output a version number:
 
-```
-$ node -v
-$ npm -v
-```
+![-v](https://raw.githubusercontent.com/hamidraza/zcui/master/docs/img/-v.png)
 <br>
 
 #### zcui CLI
 
 Once you’ve installed Node, you’ll need to globally install zcui CLI:
 
-```
-$ npm install -g zcui
-```
+![-v](https://raw.githubusercontent.com/hamidraza/zcui/master/docs/img/install.png)
+
 After the installation is complete, verify that zcui is set up correctly by typing the below command on the command line.
-```
-$ zcui --version
-```
+
+![-v](https://raw.githubusercontent.com/hamidraza/zcui/master/docs/img/zcui-v.png)
 
 ---
 <br>
 
 ### Common commands
 
-``` bash
-$ zcui
-#------
-  # Commands:
-    new <app-name>      # Initialize new app                           [aliases: n, init]
-    create <type>       # Create new component/page/layout etc  [aliases: generate, c, g]
-
-  # Examples:
-    zcui new HelloWorld
-    zcui create component Calendar
-
-
-$ zcui new <app>
-#------------------
-  # Options:
-    --target, -t   # target template name       [string] [required] [choices: "vue"]
-
-  # Examples:
-    zcui new HelloWorld --target vue
-
-
-$ zcui create <type>
-#---------------------
-  # Commands:
-    component <name>  # create new component
-    layout <name>     # create new layout
-    page <name>       # create new page
-    helper <name>     # create new helper
-    store <name>      # create new store module
-    style <name>      # create new Style partial
-
-  # Examples:
-    zcui create component Calendar
-    zcui create layout Default
-    zcui create page Home --layout Default
-    zcui create helper date
-    zcui create store user
-    zcui create style button
-```
-
----
-<br>
+| `zcui` Command | |
+|---------|-|
+| Help | ![-v](https://raw.githubusercontent.com/hamidraza/zcui/master/docs/img/zcui-help.png) |
+| New | ![-v](https://raw.githubusercontent.com/hamidraza/zcui/master/docs/img/zcui-new-help.png) |
+| Create | ![-v](https://raw.githubusercontent.com/hamidraza/zcui/master/docs/img/zcui-create-help.png) |
 
 ### Support Variants / Targets
 - [vue](https://github.com/hamidraza/zcui-vue "zcui vue")
