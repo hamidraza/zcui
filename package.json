@@ -35,18 +35,18 @@
   "trackingCode": "UA-94095916-1",
   "preferGlobal": true,
   "dependencies": {
-    "chalk": "^2.0.0",
-    "change-case": "^3.0.1",
-    "cross-env": "^5.0.0",
-    "eslint": "^5.0.1",
-    "find-root": "^1.0.0",
-    "husky": "^0.14.0",
-    "ora": "^3.0.0",
-    "shelljs": "^0.8.1",
-    "tap": "^12.0.1",
-    "validate-commit-msg": "^2.12.0",
-    "yargs": "^12.0.1",
-    "snyk": "^1.30.0"
+    "chalk": "^2.4.2",
+    "change-case": "^3.1.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "find-root": "^1.1.0",
+    "husky": "^2.1.0",
+    "ora": "^3.4.0",
+    "shelljs": "^0.8.3",
+    "snyk": "^1.156.0",
+    "tap": "^13.1.1",
+    "validate-commit-msg": "^2.14.0",
+    "yargs": "^13.2.2"
   },
   "snyk": true
 }
