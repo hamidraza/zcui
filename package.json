@@ -38,7 +38,7 @@
     "chalk": "^2.4.2",
     "change-case": "^3.1.0",
     "cross-env": "^5.2.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.2.0",
     "find-root": "^1.1.0",
     "husky": "^2.1.0",
     "ora": "^3.4.0",
