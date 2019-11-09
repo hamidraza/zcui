@@ -35,7 +35,7 @@
   "trackingCode": "UA-94095916-1",
   "preferGlobal": true,
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "change-case": "^3.1.0",
     "cross-env": "^5.2.0",
     "eslint": "^5.16.0",
