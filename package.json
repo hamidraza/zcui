@@ -46,7 +46,7 @@
     "snyk": "^1.156.0",
     "tap": "^13.1.1",
     "validate-commit-msg": "^2.14.0",
-    "yargs": "^13.2.2"
+    "yargs": "^16.0.0"
   },
   "snyk": true
 }
